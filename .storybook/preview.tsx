@@ -1,7 +1,15 @@
 import type { Preview } from '@storybook/react-vite'
+import '../src/styles/tokens.css'
 
 const preview: Preview = {
   parameters: {
+    backgrounds: {
+      default: 'canvas',
+      values: [
+        { name: 'canvas', value: '#171915' },
+        { name: 'light',  value: '#ffffff' },
+      ],
+    },
     controls: {
       matchers: {
        color: /(background|color)$/i,
